@@ -24,7 +24,7 @@ import math
 spi = SPI(1, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(10), mosi=Pin(11), miso=None)
 # def __init__( self, spi, aDC, aReset, aCS) :
-tft = TFT(spi, 3, 2, 4)
+tft = TFT(spi, 14, 15, 13)
 
 tft.initg()
 tft.rgb(True)
@@ -319,5 +319,5 @@ def test_debug():
 
 
 if __name__ == "__main__":
-    test_main()
-    # test_debug()
+    #test_main()
+    test_debug()
