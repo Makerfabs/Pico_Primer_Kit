@@ -1,3 +1,6 @@
+# The temperature and humidity are obtained through DHT11 and displayed on the screen
+# Insert MaBee DHT11 to CN6
+
 import utime
 from dht import DHT11, InvalidChecksum
 import os

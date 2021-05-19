@@ -2,16 +2,17 @@
 
 ```c++
 /*
-Version:		V1.0
+Version:		V1.1
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2021/5/19: V1.1 Add 7 display example with MaBee module.
 	
 */
 ```
 
 
-![](md_pic/main.gif)
+![](md_pic/main.jpg)
 
 
 
@@ -81,6 +82,46 @@ Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6
 
 
 ![pin](md_pic/pico_pin.jpg)
+
+## V1.1 Project
+
+### project-1-display_led_button.py
+
+Control onboard leds via buttons.
+And display status on TFT screen.
+Don't need any module
+
+### project-2-leveling.py
+
+Simple graphic level, read inclination angle with MPU6050.
+Insert MaBee MPU6050 to CN3
+
+### project-3-adc_display.py
+
+The voltage value of the read slide potentimeter is displayed on the screen
+Insert MaBee Slide Potentimeter to CN5
+
+### project-4-weather_8266.py
+
+Connect to WiFi through ESP8266 module and get the weather.
+Insert MaBee 8266 to CN1
+API from "api.openweathermap.org" is not stable, please try more and pay attention to the serial port information.
+
+### project-5-temperature .py
+
+The temperature and humidity are obtained through DHT11 and displayed on the screen
+Insert MaBee DHT11 to CN6
+
+### project-6-ir_distance.py
+
+The distance is captured by a Sharpir sensor and displayed on the screen
+Insert SharpIR to CN5
+
+### project-7-servo_control.py
+
+Use button control servo and MaBee relay
+Insert Servo to CN6
+Insert MaBee Relay to CN5
 
 
 

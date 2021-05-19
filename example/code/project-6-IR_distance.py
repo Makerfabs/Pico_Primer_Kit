@@ -1,3 +1,5 @@
+# The distance is captured by a Sharpir sensor and displayed on the screen
+# Insert SharpIR to CN5
 import utime
 from dht import DHT11, InvalidChecksum
 import os
