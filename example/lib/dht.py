@@ -73,10 +73,10 @@ class DHT11:
  
         while unchanged < MAX_UNCHANGED:
             if val != pin.value():
-                if idx >= EXPECTED_PULSES:
-                    raise InvalidPulseCount(
-                        "Got more than {} pulses".format(EXPECTED_PULSES)
-                    )
+                # if idx >= EXPECTED_PULSES:
+                #     raise InvalidPulseCount(
+                #         "Got more than {} pulses".format(EXPECTED_PULSES)
+                #     )
                 now = utime.ticks_us()
                 transitions[idx] = now - timestamp
                 timestamp = now
@@ -87,10 +87,10 @@ class DHT11:
             else:
                 unchanged += 1
         pin.init(Pin.OUT, Pin.PULL_DOWN)
-        if idx != EXPECTED_PULSES:
-            raise InvalidPulseCount(
-                "Expected {} but got {} pulses".format(EXPECTED_PULSES, idx)
-            )
+        # if idx != EXPECTED_PULSES:
+        #     raise InvalidPulseCount(
+        #         "Expected {} but got {} pulses".format(EXPECTED_PULSES, idx)
+        #     )
         return transitions[4:]
  
     def _convert_pulses_to_buffer(self, pulses):
