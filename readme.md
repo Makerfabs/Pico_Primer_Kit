@@ -2,10 +2,11 @@
 
 ```c++
 /*
-Version:		V1.1
+Version:		V1.2
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2021/5/24: V1.2 Change IR to Ultar distance sensor.
 	2021/5/19: V1.1 Add 7 display example with MaBee module.
 	
 */
@@ -112,10 +113,15 @@ API from "api.openweathermap.org" is not stable, please try more and pay attenti
 The temperature and humidity are obtained through DHT11 and displayed on the screen
 Insert MaBee DHT11 to CN6
 
-### project-6-ir_distance.py
+### ~~project-6-ir_distance.py~~
 
-The distance is captured by a Sharpir sensor and displayed on the screen
-Insert SharpIR to CN5
+~~The distance is captured by a Sharpir sensor and displayed on the screen~~
+~~Insert SharpIR to CN5~~
+
+### project-6-HC-SR04_distance.py
+
+The distance is captured by a HC-SR04 Ultra sensor and displayed on the screen
+Insert SharpIR to CN6
 
 ### project-7-servo_control.py
 

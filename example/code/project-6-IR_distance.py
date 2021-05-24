@@ -1,3 +1,9 @@
+#
+#
+#
+# OLD VERSION DON'T USE !!!!!!!!!!!!!
+#
+#
 # The distance is captured by a Sharpir sensor and displayed on the screen
 # Insert SharpIR to CN5
 import utime
