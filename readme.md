@@ -6,6 +6,7 @@ Version:		V1.2
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2021/5/24: V1.3 Add WS2812
 	2021/5/24: V1.2 Change IR to Ultar distance sensor.
 	2021/5/19: V1.1 Add 7 display example with MaBee module.
 	
@@ -129,6 +130,8 @@ Use button control servo and MaBee relay
 Insert Servo to CN6
 Insert MaBee Relay to CN5
 
+### project-8-ws2812.py
+Insert WS2812 to CN6
 
 
 ## Example List
