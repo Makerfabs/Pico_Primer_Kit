@@ -61,10 +61,10 @@ Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6
 
 ### Front:
 
-![front](md_pic/front~1.jpg)
+![front](md_pic/front.jpg)
 
 ### Back:
-![back](md_pic/back~1.jpg)
+![back](md_pic/back.jpg)
 
 
 
