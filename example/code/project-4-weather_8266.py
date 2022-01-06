@@ -6,6 +6,7 @@ import os
 import utime
 import machine
 import json
+import re
 from ST7735 import TFT
 from sysfont import sysfont
 from machine import SPI, Pin
@@ -52,21 +53,29 @@ def waitRespLine_safe(timeout=2000):
 
 
 def decode_weather_request(payload_str):
-    payload_list = payload_str.split('\n')
-    # print(payload_list)
+    # payload_list = payload_str.split('\n')
+    # # print(payload_list)
 
-    json_str = ""
-    for line in payload_list:
-        if line == "":
-            continue
-        elif line == "OK":
-            continue
-        else:
-            if line.find("+HTTPCLIENT:") != -1:
-                split_location = line.find(",")
-                json_str += line[split_location + 1:]
+    # json_str = ""
+    # for line in payload_list:
+    #     if line == "":
+    #         continue
+    #     elif line == "OK":
+    #         continue
+    #     else:
+    #         if line.find("+HTTPCLIENT:") != -1:
+    #             split_location = line.find(",")
+    #             json_str += line[split_location + 1:]
 
-    # print(json_str)
+    # # print(json_str)
+
+    payload_str = payload_str.replace('\n','').replace('\r','')
+    json_str = re.sub(r'\+HTTPCLIENT:[0-9]*,', "", payload_str)
+    if json_str.endswith("OK"):
+        json_str = json_str[:-2]
+
+    print("Cut json str:")
+    print(json_str)
 
     json_result = []
     try:
@@ -107,6 +116,7 @@ def main():
     json_str = ""
     json_str = sendCMD_waitRespLine(
         """AT+HTTPCLIENT=2,0,"http://api.openweathermap.org/data/2.5/weather?q=beijing&appid=fc55ebaf691fd562af69a4924907c627",,,1""", timeout=10000)
+    # print("JSON Str is:")
     # print(json_str)
     json_result = decode_weather_request(json_str)
     if json_result == []:
@@ -117,6 +127,7 @@ def main():
     city = json_result["name"]
     weather = json_result["weather"][0]["main"]
     temperature = float(int((json_result["main"]["temp"] - 273.15) * 10) / 10)
+    #temperature = json_result["main"]["temp"] - 273.15
 
     print(city)
     print(weather)
