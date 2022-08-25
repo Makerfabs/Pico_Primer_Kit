@@ -133,6 +133,20 @@ Insert MaBee Relay to CN5
 ### project-8-ws2812.py
 Insert WS2812 to CN6
 
+### project-9-weather.py
+
+Instead of Project 4 without 8266.
+
+Only for Pico W
+
+### project-10-sgp30.py
+
+Simple SGP30 message display
+
+Insert SGP30 to CN3, sda to GPIO8, scl to GPIO9
+
+
+
 
 ## Example List
 
