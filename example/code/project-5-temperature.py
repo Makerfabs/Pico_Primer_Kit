@@ -2,7 +2,7 @@
 # Insert MaBee DHT11 to CN6
 
 import utime
-from dht import DHT11, InvalidChecksum
+from dht import DHT11
 import os
 from ST7735 import TFT
 from sysfont import sysfont
@@ -25,8 +25,10 @@ def main():
     while True:
         utime.sleep(1)
 
-        t = (sensor.temperature)
-        h = (sensor.humidity)
+        sensor.measure()
+        t  = sensor.temperature()
+        h = sensor.humidity()
+        
         print("Temperature: {}".format(t))
         print("Humidity: {}".format(h))
 

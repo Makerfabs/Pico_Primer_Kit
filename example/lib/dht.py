@@ -43,14 +43,10 @@ class DHT11:
         self._temperature = buffer[2] + buffer[3] / 10
         self._last_measure = utime.ticks_us()
  
-    @property
     def humidity(self):
-        self.measure()
         return self._humidity
  
-    @property
     def temperature(self):
-        self.measure()
         return self._temperature
  
     def _send_init_signal(self):

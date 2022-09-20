@@ -6,6 +6,7 @@ Version:		V1.3
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2022/9/20: V1.4 Fix dht11 bug.
 	2021/7/27: V1.3 Add WS2812
 	2021/5/24: V1.2 Change IR to Ultar distance sensor.
 	2021/5/19: V1.1 Add 7 display example with MaBee module.
@@ -75,8 +76,16 @@ Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6
 - Pi Pico
 - MBee modules
 
-
 ## How To Use?
+
+Attention, all code depends on MicroPython v1.19.1 on 2022-08-19
+
+Subsequent code may not run due to MicroPython version updates. We provide two firmware.
+
+Because PicoW MicroPython has not been officially released, so the driver of the sensor, subject to the Pico.
+
+ 
+
 **If you have any questions，such as how to install the development board, how to download the code.**
 
 **Please refer to :[Get Started with MicroPython on Raspberry Pi Pico](https://hackspace.raspberrypi.org/books/micropython-pico)**
