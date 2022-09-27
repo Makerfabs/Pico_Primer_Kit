@@ -2,10 +2,11 @@
 
 ```c++
 /*
-Version:		V1.3
+Version:		V1.5
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2022/9/27: V1.5 Add PicoW support, add new Mabee CO2
 	2022/9/20: V1.4 Fix dht11 bug.
 	2021/7/27: V1.3 Add WS2812
 	2021/5/24: V1.2 Change IR to Ultar distance sensor.
@@ -80,7 +81,11 @@ Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6
 
 Attention, all code depends on MicroPython v1.19.1 on 2022-08-19
 
-Subsequent code may not run due to MicroPython version updates. We provide two firmware.
+**Subsequent code may not run due to MicroPython version updates. We provide two firmware.**
+
+- Pico		:	rp2-pico-20220618-v1.19.1.uf2
+
+- PicoW	:	rp2-pico-w-20220819-unstable-v1.19.1-298-gc616721b1.uf2
 
 Because PicoW MicroPython has not been officially released, so the driver of the sensor, subject to the Pico.
 
@@ -94,7 +99,7 @@ Because PicoW MicroPython has not been officially released, so the driver of the
 
 ![pin](md_pic/pico_pin.jpg)
 
-## V1.1 Project
+## V1.2 Project
 
 ### project-1-display_led_button.py
 
@@ -148,56 +153,23 @@ Instead of Project 4 without 8266.
 
 Only for Pico W
 
-### project-10-sgp30.py
+### project-10-CO2.py
 
-Simple SGP30 message display
+Mabee CO2 message display
 
-Insert SGP30 to CN3, sda to GPIO8, scl to GPIO9
+Insert Mabee CO2 to CN3, sda to GPIO8, scl to GPIO9
 
+### project-11-thingspeak.py
 
+A simple example is sending data to ThingSpeak. 
 
+Please replace the Wifi information and Thingspeak interface with the user's own.
 
-## Example List
-
-### test_display.py
-
-Test ST7735 LCD screen.
-
-- Copy ST7735.py and sysfont.py to /lib
-- Copy test_display.py to /code
-- Run test_display.py
-
-### test_dht11.py
-
-Using DHT11 sensor  to get temperature and humidity.
-- Copy dht.py to /lib
-- Copy test_dht11.py to /code
-- Run test_dht11.py
-
-### test_imu.py
-
-Testing MPU6050.
-
-- Copy mpu6050.py to /lib
-- Copy test_imu.py to /code
-- Run test_imu.py
-
-### test_sharpIR.py
-
-Using Sharp GP2Y0A21 IR sensor  to get distance.
-
-- Copy test_sharpIR.py to /code
-- Run test_sharpIR.py
+Only for Pico W
 
 
+## Other test file
 
-## Code Explain
-- Import Library
+All files starting with Test are used by engineers and are not guaranteed to be completely correct. 
 
-```python
-from ST7735 import TFT
-from sysfont import sysfont
-from machine import SPI, Pin
-import time
-import math
-```
+But it has some reference value.
