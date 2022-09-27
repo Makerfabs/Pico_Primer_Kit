@@ -6,12 +6,15 @@ from ST7735 import TFT
 from sysfont import sysfont
 import time
 from sgp30 import SGP30
+import sht31
 
 spi = SPI(1, baudrate=20000000, polarity=0, phase=0,
           sck=Pin(10), mosi=Pin(11), miso=None)
 tft = TFT(spi, 14, 15, 13)
 i2c = I2C(0, scl=Pin(9), sda=Pin(8), freq=400_000)
 sensor = SGP30(i2c)
+sensor2 = sht31.SHT31(i2c, addr=0x44)
+
 
 tft.initg()
 tft.rgb(True)
@@ -46,15 +49,22 @@ def main():
         tvoc_ppb, co2_eq_ppm = sensor.sgp30_measure_iaq_blocking_read()
         print("tVOC  Concentration: ", tvoc_ppb, " ppb")
         print("CO2eq Concentration: ", co2_eq_ppm, " ppm")
-        # The IAQ measurement must be triggered exactly once per second (SGP30)
-        # to get accurate values.
+        
+        temp,humi = sensor2.get_temp_humi()
+        print("Temperature:",temp)
+        print("Humidity:",humi)
 
         tvoc_str = "TVOC " + str(tvoc_ppb) + " ppb" 
         eco2_str = "ECO2 " + str(co2_eq_ppm) + " ppm" 
+        temp_str = "Temp " + str(temp) + " C"
+        humi_str = "Humi " + str(humi) + " %"
 
         tft.fillrect((0, 20), (128, 40), TFT.BLACK)
         tft.text((0, 20), tvoc_str, TFT.WHITE, sysfont, 1, nowrap=True)
         tft.text((0, 40), eco2_str, TFT.WHITE, sysfont, 1, nowrap=True)
+        tft.text((0, 60), temp_str, TFT.WHITE, sysfont, 1, nowrap=True)
+        tft.text((0, 80), humi_str, TFT.WHITE, sysfont, 1, nowrap=True)
+
 
         time.sleep(1)
 
