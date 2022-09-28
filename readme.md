@@ -31,7 +31,7 @@ Note:
 
 
 
-# Pico Primer Kit
+# Pico(PicoW) Primer Kit
 ## Intruduce
 
 ### Product Link ：[Raspberry Pi Pico Primer Kit](https://www.makerfabs.com/raspberry-pi-pico-primer-kit.html)
@@ -41,7 +41,9 @@ Note:
 Pico Primer Kit is the development shield of Pi Pico. It has ST7735 color screen, 3 LED lights and 3 buttons. There are multiple SPI, I2C, UART, GPIO interfaces.
 Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6050, relay and other modules.
 
+**Now that we have a new kit for Pico W, we have replaced the 8266 module with Mabee CO2.**
 
+Most routines are compatible, the only differences are those related to WiFi.
 
 ## Feature
 
@@ -151,7 +153,7 @@ Insert WS2812 to CN6
 
 Instead of Project 4 without 8266.
 
-Only for Pico W
+**Only for Pico W**
 
 ### project-10-CO2.py
 
@@ -165,7 +167,7 @@ A simple example is sending data to ThingSpeak.
 
 Please replace the Wifi information and Thingspeak interface with the user's own.
 
-Only for Pico W
+**Only for Pico W**
 
 
 ## Other test file
