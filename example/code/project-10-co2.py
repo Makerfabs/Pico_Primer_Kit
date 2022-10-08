@@ -16,7 +16,7 @@ password = '20160704'
 
 html = """<!DOCTYPE html>
 <html>
-    <head> <title>Pico W + Mabee CO2</title> <meta http-equiv="refresh" content="5"></head>
+    <head> <title>Pico W + Mabee CO2</title></head>
     <body> <h1>Pico W + Mabee CO2</h1>
         <p>%s</p>
         <p>%s</p>
