@@ -6,6 +6,7 @@ Version:		V1.5
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2022/10/8: V1.6 Update project10
 	2022/9/27: V1.5 Add PicoW support, add new Mabee CO2
 	2022/9/20: V1.4 Fix dht11 bug.
 	2021/7/27: V1.3 Add WS2812
@@ -157,9 +158,18 @@ Instead of Project 4 without 8266.
 
 ### project-10-CO2.py
 
-Mabee CO2 message display
+Mabee CO2 message display and run a webserver.
 
 Insert Mabee CO2 to CN3, sda to GPIO8, scl to GPIO9
+
+Need change WiFi config in code.
+
+```python
+ssid = 'Makerfabs'
+password = '20160704'
+```
+
+
 
 ### project-11-thingspeak.py
 
