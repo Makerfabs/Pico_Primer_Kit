@@ -5,6 +5,12 @@ pri_pin = Pin(16, Pin.IN, Pin.PULL_DOWN)
 
 start_time = time.ticks_ms()
 
+def main2():
+    while True:
+        status = pri_pin.value()
+        print("Status:" + str(status))
+        time.sleep(0.5)
+
 def main():
     trigger_flag = 0
     trigger_time = 0

@@ -37,7 +37,10 @@ Note:
 
 ### Product Link ：[Raspberry Pi Pico Primer Kit](https://www.makerfabs.com/raspberry-pi-pico-primer-kit.html)
 
-### Wiki Link : [Pico_Primer_kit](https://www.makerfabs.com/wiki/index.php?title=Pico_Primer_Kit)
+### Wiki Link : 
+[Pico_Primer_kit](https://www.makerfabs.com/wiki/index.php?title=Pico_Primer_Kit)
+
+[Pico W_Primer_kit](https://www.makerfabs.com/wiki/index.php?title=Pico_W_Primer_Kit)
 
 Pico Primer Kit is the development shield of Pi Pico. It has ST7735 color screen, 3 LED lights and 3 buttons. There are multiple SPI, I2C, UART, GPIO interfaces.
 Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6050, relay and other modules.
@@ -178,6 +181,14 @@ A simple example is sending data to ThingSpeak.
 Please replace the Wifi information and Thingspeak interface with the user's own.
 
 **Only for Pico W**
+
+### project-12-thingspeak.py
+
+PIR induction Demo, when the sensor detects the human body after alarm.
+
+ 
+
+
 
 
 ## Other test file
