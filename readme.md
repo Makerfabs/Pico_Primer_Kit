@@ -2,10 +2,11 @@
 
 ```c++
 /*
-Version:		V1.5
+Version:		V1.7
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
+	2022/10/11: V1.7 Add project11,12
 	2022/10/8: V1.6 Update project10
 	2022/9/27: V1.5 Add PicoW support, add new Mabee CO2
 	2022/9/20: V1.4 Fix dht11 bug.
