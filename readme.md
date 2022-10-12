@@ -183,7 +183,7 @@ Please replace the Wifi information and Thingspeak interface with the user's own
 
 **Only for Pico W**
 
-### project-12-thingspeak.py
+### project-12-PIR_detection.py
 
 PIR induction Demo, when the sensor detects the human body after alarm.
 
