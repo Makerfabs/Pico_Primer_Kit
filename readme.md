@@ -1,18 +1,19 @@
-# Pico Primer Kit
+# Pico(W) Primer Kit
 
 ```c++
 /*
-Version:		V1.7
+Version:		V1.8
 Author:			Vincent
 Create Date:	2021/4/16
 Note:
-	2022/10/11: V1.7 Add project11,12
-	2022/10/8: V1.6 Update project10
-	2022/9/27: V1.5 Add PicoW support, add new Mabee CO2
-	2022/9/20: V1.4 Fix dht11 bug.
-	2021/7/27: V1.3 Add WS2812
-	2021/5/24: V1.2 Change IR to Ultar distance sensor.
-	2021/5/19: V1.1 Add 7 display example with MaBee module.
+	2022/12/30	V1.8 Edit Wiki Link
+	2022/10/11 	V1.7 Add project11,12
+	2022/10/8 	V1.6 Update project10
+	2022/9/27 	V1.5 Add PicoW support, add new Mabee CO2
+	2022/9/20 	V1.4 Fix dht11 bug.
+	2021/7/27 	V1.3 Add WS2812
+	2021/5/24 	V1.2 Change IR to Ultar distance sensor.
+	2021/5/19 	V1.1 Add 7 display example with MaBee module.
 	
 */
 ```
@@ -29,19 +30,22 @@ Note:
 
 [Makerfabs home page](https://www.makerfabs.com/)
 
-[Makerfabs Wiki](https://makerfabs.com/wiki/index.php?title=Main_Page)
+[Makerfabs Wiki](https://wiki.makerfabs.com/)
 
 
 
 # Pico(PicoW) Primer Kit
 ## Intruduce
 
-### Product Link ：[Raspberry Pi Pico Primer Kit](https://www.makerfabs.com/raspberry-pi-pico-primer-kit.html)
+### Product Link ：
+
+[Pico Primer Kit for Raspberry PI](https://www.makerfabs.com/raspberry-pi-pico-primer-kit.html)
+
+[Pico W Primer Kit for Raspberry PI](https://www.makerfabs.com/pico-w-primer-kit-for-raspberry-pi.html)
 
 ### Wiki Link : 
-[Pico_Primer_kit](https://www.makerfabs.com/wiki/index.php?title=Pico_Primer_Kit)
 
-[Pico W_Primer_kit](https://www.makerfabs.com/wiki/index.php?title=Pico_W_Primer_Kit)
+[Pico W_Primer_kit](https://wiki.makerfabs.com/Pico_W_Primer_Kit.html)
 
 Pico Primer Kit is the development shield of Pi Pico. It has ST7735 color screen, 3 LED lights and 3 buttons. There are multiple SPI, I2C, UART, GPIO interfaces.
 Kit contains a number of MBEE series modules. Such as potentiometer, DHT11, MPU6050, relay and other modules.
